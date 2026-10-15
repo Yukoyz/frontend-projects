@@ -27,8 +27,10 @@ Página web de una tienda ficticia de productos fitness, hecha con HTML, CSS y J
 3. Abre `index.html` en el navegador (o usa la extensión Live Server)
 
 ## Lo que aprendí
+aprendi a hacer scroll utilizando el javascript y claude para entender como iba 
 
-[Escribe 2 o 3 frases tuyas: por ejemplo, cómo funciona el filtro de productos, qué te costó de Grid o cómo hiciste el efecto del scroll.]
+el filtro de productos hice que funcionara como un menu trate de estructurarlo bien en css utilizando el width y height de la imagen y el font size
+
 
 ## Autor
 
