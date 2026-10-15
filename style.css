@@ -1,0 +1,247 @@
+/* =========================================================
+   1. VARIABLES
+   ========================================================= */
+:root {
+    --fondo-oscuro: #12151c;
+    --fondo-claro: #f5f6f8;
+    --blanco: #ffffff;
+    --texto: #1d2026;
+    --texto-suave: #5b6270;
+    --texto-claro-suave: #c3c8d4;
+    --acento: #4a5ef0;
+    --acento-hover: #3547d4;
+    --borde: #e3e6ec;
+    --alto-barra: 96px;
+}
+
+/* =========================================================
+   2. BASE
+   ========================================================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--alto-barra);
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--texto);
+    background: var(--fondo-claro);
+    line-height: 1.6;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--acento); }
+
+h2 { font-size: 2rem; text-align: center; margin-bottom: 24px; }
+h3 { font-size: 1.15rem; margin-bottom: 8px; }
+
+/* Foco visible para quien navega con teclado */
+a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--acento);
+    outline-offset: 3px;
+}
+
+/* =========================================================
+   3. ENCABEZADO (logo centrado)
+   ========================================================= */
+.header-principal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    background: rgba(18, 21, 28, 0.88);
+    backdrop-filter: blur(8px);
+    z-index: 10;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;           /* centra logo y enlaces */
+    gap: 6px;
+    padding: 12px 20px;
+}
+
+.logo {
+    color: var(--blanco);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--texto-claro-suave);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--blanco); }
+
+/* =========================================================
+   4. PORTADA (solo imagen)
+   ========================================================= */
+.hero-portada {
+    height: 100vh;
+    min-height: 420px;
+    background: var(--fondo-oscuro);   /* se ve al desvanecerse la imagen */
+    overflow: hidden;
+}
+
+.hero-portada__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                 /* llena la pantalla sin deformarse */
+    object-position: center;
+    will-change: opacity, transform;   /* animada con JS al hacer scroll */
+}
+
+/* =========================================================
+   5. BOTONES
+   ========================================================= */
+.btn-comprar {
+    display: inline-block;
+    padding: 14px 34px;
+    background: var(--acento);
+    color: var(--blanco);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+.btn-comprar:hover { background: var(--acento-hover); }
+
+.btn-pequeno { padding: 10px 22px; font-size: 0.95rem; }
+
+/* =========================================================
+   6. CATÁLOGO
+   ========================================================= */
+.catalogo { padding: 80px 8%; }
+
+.catalogo-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.tab {
+    padding: 10px 22px;
+    border: 1px solid var(--borde);
+    border-radius: 999px;
+    background: var(--blanco);
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.tab:hover { border-color: var(--acento); color: var(--acento); }
+.tab.activo {
+    background: var(--acento);
+    border-color: var(--acento);
+    color: var(--blanco);
+}
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.tarjeta {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 18px;
+    text-align: center;
+}
+.tarjeta[hidden] { display: none; }
+
+.tarjeta img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: var(--borde);
+    border-radius: 10px;
+    margin-bottom: 14px;
+}
+
+.tarjeta-precio {
+    display: block;
+    font-weight: 700;
+    color: var(--acento-hover);
+    margin-bottom: 14px;
+}
+
+/* =========================================================
+   7. SOBRE NOSOTROS
+   ========================================================= */
+.descripcion {
+    padding: 80px 8%;
+    background: var(--blanco);
+}
+
+.descripcion-intro {
+    max-width: 600px;
+    margin: 0 auto 48px;
+    text-align: center;
+    color: var(--texto-suave);
+}
+
+.descripcion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.descripcion-grid p { color: var(--texto-suave); }
+
+/* =========================================================
+   8. CONTACTO
+   ========================================================= */
+.contacto {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.contacto h3 { margin-top: 28px; }
+
+.redes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+/* =========================================================
+   9. FOOTER
+   ========================================================= */
+.footer {
+    padding: 24px;
+    text-align: center;
+    background: var(--fondo-oscuro);
+    color: var(--texto-claro-suave);
+    font-size: 0.9rem;
+}
+
+/* =========================================================
+   10. RESPONSIVE
+   ========================================================= */
+@media (max-width: 800px) {
+    .nav-links { gap: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+}
