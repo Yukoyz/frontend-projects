@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Productos fitness para entrenar en casa: mancuernas ajustables, kettlebells, tapetes y más." />
+    <title>Productos Fitness</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ========== ENCABEZADO ========== -->
+    <header class="header-principal">
+        <nav class="nav-container" aria-label="Principal">
+            <a href="#inicio" class="logo">PRODUCTOS FITNESS</a>
+            <ul class="nav-links">
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#descripcion">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ========== PORTADA ========== -->
+        <section id="inicio" class="hero-portada">
+            <source media="(max-width: 600px)"
+        src="Productos fitness movil.png">
+            <img
+                id="hero-img"
+                class="hero-portada__img"
+                src="Productos fitness.png"
+                alt="Productos Fitness: una mujer entrena con cuerdas y un hombre con mancuernas en un gimnasio"
+                width="1600"
+                height="800" />
+        </section>
+
+
+        <!-- ========== MENÚ DE PRODUCTOS ========== -->
+        <section id="productos" class="catalogo">
+            <h2>Nuestros productos</h2>
+
+            <div class="catalogo-menu" role="group" aria-label="Filtrar por categoría">
+                <button class="tab activo" data-filtro="todos">Todos</button>
+                <button class="tab" data-filtro="pesas">Pesas</button>
+                <button class="tab" data-filtro="cardio">Cardio</button>
+                <button class="tab" data-filtro="accesorios">Accesorios</button>
+            </div>
+            
+
+
+
+
+
+
+
+
+
+            
+            <div class="catalogo-grid">
+                <article class="tarjeta" data-categoria="pesas">
+                <img src="https://sportfitness.co/cdn/shop/files/0c24531e-0f75-4000-aa4f-1e9acb5d2e9b.jpg?v=1769183309" alt="Mancuernas ajustables" width="300" height="300" loading="lazy" />
+                <h3>Mancuernas ajustables</h3>
+                <span class="tarjeta-precio">$99.99</span>
+                <a href="#" class="btn-comprar btn-pequeno">Comprar</a>
+            </article>
+                <article class="tarjeta" data-categoria="pesas">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTuKFPB7MQxFYeo6FluQQTC2OyOT8LZ1jDEY8sAOqFbW3jWDvXELznzIgN&s=10" alt="Kettlebell de 12 kg" width="300" height="300" loading="lazy" />
+                    <h3>Kettlebell 12 kg</h3>
+                    <span class="tarjeta-precio">$39.99</span>
+                    <a href="#" class="btn-comprar btn-pequeno">Comprar</a>
+                </article>
+
+                <article class="tarjeta" data-categoria="cardio">
+                    <img src="https://miyagi.com.co/cdn/shop/files/cuerda-saltar-contador-m489-azul.png?v=1756504614" alt="Cuerda para saltar" width="300" height="300" loading="lazy" />
+                    <h3>Cuerda para saltar</h3>
+                    <span class="tarjeta-precio">$12.99</span>
+                    <a href="#" class="btn-comprar btn-pequeno">Comprar</a>
+                </article>
+
+                <article class="tarjeta" data-categoria="accesorios">
+                    <img src="https://contents.mediadecathlon.com/p2737652/k$c300519331d2a4c0f305252fb2f384ff/mat-yoga-4mm-verde-oscuro.jpg" alt="Tapete de yoga" width="300" height="300" loading="lazy" />
+                    <h3>Tapete de yoga</h3>
+                    <span class="tarjeta-precio">$24.99</span>
+                    <a href="#" class="btn-comprar btn-pequeno">Comprar</a>
+                </article>
+
+                <article class="tarjeta" data-categoria="pesas">
+                    <img src="https://www.livycfitness.com/imagenes/catalogo/productos/prod4114.jpg" alt="Barra con discos" width="300" height="300" loading="lazy" />
+                    <h3>Barra con discos</h3>
+                    <span class="tarjeta-precio">$149.99</span>
+                    <a href="#" class="btn-comprar btn-pequeno">Comprar</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ========== SOBRE NOSOTROS ========== -->
+        <section id="descripcion" class="descripcion">
+            <h2>Sobre nosotros</h2>
+            <p class="descripcion-intro">Vendemos equipos para entrenar en casa, con envíos a toda Colombia.</p>
+
+            <div class="descripcion-grid">
+                <div>
+                    <h3>Calidad</h3>
+                    <p>Ofrecemos productos de alta calidad para garantizar la satisfacción de nuestros clientes.</p>
+                </div>
+                <div>
+                    <h3>Variedad</h3>
+                    <p>Contamos con una amplia gama de productos para las necesidades de todos nuestros clientes.</p>
+                </div>
+                <div>
+                    <h3>Atención al cliente</h3>
+                    <p>Nuestro equipo está disponible para ayudarte en todo momento.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTACTO ========== -->
+        <section id="contacto" class="contacto">
+            <h2>Contacto y redes sociales</h2>
+            <p>
+                WhatsApp:
+                <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer">+57 300 123 4567</a>
+            </p>
+
+            <h3>Síguenos en redes sociales</h3>
+            <ul class="redes">
+                <li><a href="https://www.facebook.com/productosfitness" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li><a href="https://www.instagram.com/productosfitness" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://twitter.com/productosfitness" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Productos Fitness. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
